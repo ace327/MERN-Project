@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast';
 import Home from "./Pages/Home";
 import Success from "./Pages/Success"
 import NotFound from "./Pages/NotFound"
+import { setDriver } from 'mongoose';
 function App() { 
   return (
 
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/success' element={<Success />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} /> 
         
       </Routes>
     </Router>
@@ -21,4 +22,7 @@ function App() {
   )
 } 
 
+
 export default App
+
+
