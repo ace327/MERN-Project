@@ -18,12 +18,6 @@ const Qulities = () => {
   )
 }
 
-<section className="qulities">
-    <div className="container">
-        {
-            data[0].our
-        }
-    </div>
-</section>
+
 
 export default Qulities

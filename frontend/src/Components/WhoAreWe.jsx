@@ -9,7 +9,7 @@ const WhoAreWe = () => {
 
                 {
 
-                    data[0].who_are_we.map(element=> {
+                    data[0].who_are_we.slice(0,2).map(element=> {
 
                         return (
 
@@ -19,10 +19,37 @@ const WhoAreWe = () => {
 
 
                             </div>
+
                         )
                     })
                 }
             </div>
+
+            <div className="image_banner">
+              <img src="/center.svg" alt="" className='gradient_bg'/>
+              <img src="/whoweare.png" alt="" />
+            </div>
+
+            <div className="text_banner">
+
+                {
+
+                    data[0].who_are_we.slice(2).map(element=> {
+
+                        return (
+
+                            <div className="card" key={element.id}>
+                                <h1 style={{fontWeight: "300"}} className="heading"></h1>
+                                <p>{element.title}</p>
+
+
+                            </div>
+
+                        )
+                    })
+                }
+            </div>
+
         </div>
         
       </section>
