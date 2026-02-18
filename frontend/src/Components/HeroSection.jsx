@@ -13,7 +13,7 @@ function HeroSection() {
                 </h1>
                 <div className="combined_boxes">
                     <div className="imageBox">
-                        <img src="./hero1.png" alt="" srcset="" />
+                        <img src="./hero1.png" alt="" srcSet="" />
                     </div>
                     <div className="textAndLogo">
                         <div className="textWithSvg">

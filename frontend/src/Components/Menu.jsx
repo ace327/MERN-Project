@@ -5,7 +5,7 @@ import {data} from '../restApi.json'
 const Menu = () => {
   return (
     <section className='menu' id='menu'>
-         <div className="conatiner">
+         <div className="container">
             <div className="heading_section">
                 <h1 className="heading">
                     POPULER DISHES

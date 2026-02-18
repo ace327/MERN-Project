@@ -35,7 +35,7 @@ function Success() {
       <img src="./sandwitch.png" alt="success" />
       <h1>Redirecting to Home in (countdown) seconds....</h1>
       qsein
-      <Link to={"/"}> Back to Home <HiOutlineArrowNarrowRight>
+      <Link to={"/"}> Back to Home <HiOutlineArrowNarrowRight />
       </Link>
     </div>
   </section>

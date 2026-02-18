@@ -14,14 +14,17 @@ const Reservation = () => {
     const [time, setTime] = useState("");
     const [phone, setPhone] = useState("");
 
+    const navigate = useNavigate();
+
+
     const handleReservation = async (e) => {
 
         e.preventDefault();
         try{
 
-            const (data) = await axios.post("localhost",{firstName, lastName, email, phone, time},
+            const {data} = await axios.post("localhost",{firstName, lastName, email, phone, time},
                 { 
-                    header: {
+                    headers: {
                         "Content-Type": "application/json",
                     }, 
                     withCredentials: true,
@@ -33,9 +36,9 @@ const Reservation = () => {
             setFirstName("");
             setLastName("");
             setPhone("");
-            setEmail();
-            setTime();
-            setDate();
+            setEmail("");
+            setTime("");
+            setDate("");
             navigate("/success")
             
         } catch (error) {
@@ -60,7 +63,8 @@ const Reservation = () => {
                     <div className="reservation_form_box">
                         <h1>Make A Reservation</h1>
                         <p>For Further Questions,Please Call</p>
-                        <form action="">
+                        <form onSubmit={handleReservation}>
+
                             <div>
                                 <input 
                                 type="text"                       
@@ -98,11 +102,11 @@ const Reservation = () => {
                                     value={phone} 
                                     onChange={(e) => setPhone(e.target.value)}/> 
                                 </div>
-                                    <button type=' submit' onClick={handleReservation}>
+                                    <button type="submit" onClick={handleReservation}>
                                         RESERVE NOW(" ")
                                         <span>
 
-                                            <HiOutLineArrowNarrowRight>   </HiOutLineArrowNarrowRight>
+                                            <HiOutlineArrowNarrowRight>   </HiOutlineArrowNarrowRight>
                                         </span>
                                     </button>
                                    
