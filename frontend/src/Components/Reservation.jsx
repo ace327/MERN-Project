@@ -1,5 +1,5 @@
 import React from 'react'
-import {HiOutLineArrowNarrowRight} from 'react-icons/hi'
+import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
 import axios from 'axios'
 import {useState} from 'react'
 import toast from 'react-hot-toast'
@@ -12,7 +12,7 @@ const Reservation = () => {
     const [email, setEmail] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
-    const [phone, setPhone] = useState(0);
+    const [phone, setPhone] = useState("");
 
     const handleReservation = async (e) => {
 
@@ -54,7 +54,7 @@ const Reservation = () => {
 
             <div className="container">
                 <div className="banner">
-                    <img src="reservation.png" alt="" className="reservation" />
+                    <img src="/reservation.png" alt="" className="reservation" />
                 </div>
                 <div className="banner">
                     <div className="reservation_form_box">
@@ -67,11 +67,46 @@ const Reservation = () => {
                                 placeholder=' First Name' 
                                 value={firstName} 
                                 onChange={(e) => setFirstName(e.target.value)} />
-
+                                <input 
+                                type="text"                       
+                                placeholder=' Last Name' 
+                                value={lastName} 
+                                onChange={(e) => setLastName(e.target.value)} />
+                                
+                                
 
 
                                 </div>
-                        </form>
+
+                                <div>
+
+                                    <input type="date" placeholder='Date' value={date} onChange={(e) => setDate(e.target.value)}  />
+                                    <input type="time" placeholder='Time' value={time} onChange={(e) => setDate(e.target.value)}  />
+                                </div>
+
+                                <div>
+                                    <input 
+                                    type="email" 
+                                    placeholder='email' 
+                                    className='email_log' 
+                                    value={email} 
+                                    onChange={(e) => setEmail(e.target.value)}/> 
+                                    <input 
+                                    type="number" 
+                                    placeholder='phone' 
+                                    className='email_log' 
+                                    value={phone} 
+                                    onChange={(e) => setPhone(e.target.value)}/> 
+                                </div>
+                                    <button type=' submit' onClick={handleReservation}>
+                                        RESERVE NOW(" ")
+                                        <span>
+
+                                            <HiOutLineArrowNarrowRight>   </HiOutLineArrowNarrowRight>
+                                        </span>
+                                    </button>
+                                   
+                        </form> 
                     </div>
                     
                     

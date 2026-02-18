@@ -4,6 +4,7 @@ import Qulities from '../Components/Qulities.jsx'
 import Menu from '../Components/Menu.jsx'
 import WhoAreWe from '../Components/WhoAreWe.jsx'
 import Team from '../Components/Team.jsx'
+import Footer from '../Components/Footer.jsx'
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <Menu />
       <WhoAreWe />
       <Team/>
+      <Footer />
 
     </div>
   )
